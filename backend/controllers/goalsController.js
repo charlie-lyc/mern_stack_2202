@@ -12,15 +12,26 @@ const Goal = require('../models/goalModel')
 // }
 ///////////////////////////////////////////////////////////////
 // const readGoals = async (req, res) => {
-//     await res.status(200).json({ message: 'Read all goals' })
+//     // res.status(200).json({ message: 'Read all goals' })
+
+//     /** Use Mongo DB and Mongoose ODM **/
+//     try {
+//         const allGoals = await Goal.find()
+//         // res.status(200).json({ data: allGoals })
+//         /* Or */
+//         res.status(200).json(allGoals)
+//     } catch (error) {
+//         console.log(error)
+//     }
 // }
 ///////////////////////////////////////////////////////////////
 const readGoals = asyncHandler(async (req, res) => {
     // res.status(200).json({ message: 'Read all goals' })
-
+    
     /** Use Mongo DB and Mongoose ODM **/
     const allGoals = await Goal.find()
     // res.status(200).json({ data: allGoals })
+    /* Or */
     res.status(200).json(allGoals)
 })
 
