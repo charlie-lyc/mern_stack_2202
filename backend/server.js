@@ -2,13 +2,19 @@
 
 const express = require('express')
 const dotenv = require('dotenv').config()
-const port = process.env.PORT || 5000
+const colors = require('colors')
 
+/** Connect to MongoDB **/
+const connectDB = require('./config/db')
+connectDB()
+/**************************************/
+
+const port = process.env.PORT || 5000
 const app = express()
 
 /** Use Body-Parser to Get Data from Request Body **/
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.json()) // for Parsing 'application/json'
+app.use(express.urlencoded({ extended: false })) // for Parsing 'application/x-www-form-urlencoded'
 /***************************************************/
 
 
@@ -22,9 +28,9 @@ const goalsRouter = require('./routers/goalsRouter')
 app.use('/api/goals', goalsRouter)
 
 
-/***************************************************/
 /** Error Handling **/
-const { errorHandler } = require('./middleware/errorMiddleware')
+const { errorHandler } = require('./middlewares/errorMiddleware')
 app.use(errorHandler)
+/***************************************************************/
 
-app.listen(port, () => console.log(`Server started on port ${port}`))
+app.listen(port, () => console.log(`Server started on port ${port}`.blue.underline))
