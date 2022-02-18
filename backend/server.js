@@ -4,6 +4,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const colors = require('colors')
 
+
 /** Connect to MongoDB **/
 const connectDB = require('./config/db')
 connectDB()
@@ -18,18 +19,29 @@ app.use(express.urlencoded({ extended: false })) // for Parsing 'application/x-w
 /***************************************************/
 
 
+/* GOALS */
 // app.get('/api/goals', (req, res) => {
 //     // res.send('Get all goals')
+//     //////////////////////////////////////////////////
 //     // res.status(200).send('Get all goals')
+//     //////////////////////////////////////////////////
 //     res.status(200).json({ message: 'Get all goals' })
 // })
-/////////////////////////////////////////////////////
-const goalsRouter = require('./routers/goalsRouter')
-app.use('/api/goals', goalsRouter)
+/////////////////////////////////////////////////////////
+// const goalsRouter = require('./routers/goalsRouter')
+// app.use('/api/goals', goalsRouter)
+/////////////////////////////////////////////////////////
+app.use('/api/goals', require('./routers/goalsRouter'))
+
+/* USERS */
+// const usersRouter = require('./routers/usersRouter')
+// app.use('/api/users', usersRouter)
+/////////////////////////////////////////////////////////
+app.use('/api/users', require('./routers/usersRouter'))
 
 
 /** Error Handling **/
-const { errorHandler } = require('./middlewares/errorMiddleware')
+const errorHandler = require('./middlewares/errorMiddleware')
 app.use(errorHandler)
 /***************************************************************/
 

@@ -1,0 +1,35 @@
+
+- bcrypt.js : Hash Passwords
+- JSON Web Token(JWT) : Protect Routes
+
+
+
+< CRUD >
+
+Create
+-> HTTP [POST] /api/users + payload 
+<- 201
+
+Login
+-> HTTP [POST] /api/users/login + payload
+<- 200 + payload <token>
+
+Logout
+-> HTTP [POST] /api/users/login + <token>
+<- 200
+
+Read
+-> HTTP [GET] /api/users/me + <token>
+<- 200 + payload
+
+Update 
+-> HTTP [PUT] /api/users/me + payload <token>
+<- 200 + payload
+
+Delete
+-> HTTP [Delete] /api/users/me + <token>
+<- 200
+
+
+----------------------------------------------------------
+npm i bcryptjs jsonwebtoken
