@@ -1,3 +1,7 @@
 
 - React : Redux Toolkit
 - Complete Full Stack App
+
+
+----------------------------------------------------------
+npx create-react-app@latest frontend --template redux
