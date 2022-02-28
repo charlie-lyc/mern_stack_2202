@@ -1,5 +1,5 @@
 
-- React : Redux Toolkit
+- React, Redux, and Redux Toolkit
 - Complete Full Stack App
 
 

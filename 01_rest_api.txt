@@ -25,7 +25,7 @@ Delete
 
 ----------------------------------------------------------
 npm init (-y)
-npm i express mongoose express-async-handler dotenv colors
+npm i -S express mongoose express-async-handler dotenv colors
 npm i -D nodemon
 
 git init
