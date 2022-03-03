@@ -1,0 +1,72 @@
+import { useState } from 'react'
+import { FaUser } from 'react-icons/fa'
+
+
+const Register = () => {
+    const [formData, setFormData ] = useState({
+        name: '',
+        email: '',
+        password: '',
+        confirm: ''
+    })
+    const { name, email, password, confirm } = formData
+
+    const handleChange = e => {
+        e.preventDefault()
+        setFormData((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value
+        }))
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log(formData)
+        setFormData(() => ({
+            name: '',
+            email: '',
+            password: '',
+            confirm: ''
+        }))
+    }
+
+    return (
+        <>
+            <section className='heading'>
+                <h1>
+                    <FaUser />Register
+                </h1>
+                <p>Please Create An Account</p>
+            </section>
+            <section className='form'>
+                <form onSubmit={ handleSubmit }>
+                    <div className='form-group'>
+                        <input type='text' 
+                            name='name' 
+                            onChange={ handleChange } 
+                            value={ name } 
+                            placeholder='Enter your name' />
+                        <input type='text' 
+                            name='email' 
+                            onChange={ handleChange } 
+                            value={ email } 
+                            placeholder='Enter your email' />
+                        <input type='text'
+                            name='password' 
+                            onChange={ handleChange } 
+                            value={ password } 
+                            placeholder='Enter password' />
+                        <input type='text' 
+                            name='confirm' 
+                            onChange={ handleChange } 
+                            value={ confirm } 
+                            placeholder='Confirm password' />
+                    </div>
+                    <button type="submit" className='btn btn-block'>Submit</button>
+                </form>
+            </section>
+        </>
+    )
+}
+
+export default Register
