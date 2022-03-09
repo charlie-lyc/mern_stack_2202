@@ -22,7 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env # WARNING !!!
+# WARNING !!!
+.env 
+
 01_rest_api.txt
 02_jwt_authentication.txt
 03_frontend_authentication.txt
