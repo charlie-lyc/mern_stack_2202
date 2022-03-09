@@ -27,7 +27,7 @@ const Register = () => {
             navigate('/login')
         }
         if (isError) {
-            toast.error(message, { autoClose: 750})
+            toast.error(message, { autoClose: 1000})
             dispatch(reset())
             navigate('/register')
         }
@@ -45,7 +45,7 @@ const Register = () => {
         e.preventDefault()
         // console.log(formData)
         if (password !== confirm) {
-            return toast.error('Passwords do not match', { autoClose: 750})
+            return toast.error('Passwords do not match', { autoClose: 1000})
         }
         const userData = { name, email, password }
         dispatch(registerUser(userData))

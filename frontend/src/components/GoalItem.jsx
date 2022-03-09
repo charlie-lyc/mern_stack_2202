@@ -33,7 +33,7 @@ const GoalItem = ({ goal }) => {
 
     const handleUpdate = () => {
         if (!currentGoal.text) {
-            return toast.error('Rewrite your goal!', { autoClose: 750 })
+            return toast.error('Rewrite your goal!', { autoClose: 1000 })
         }
         dispatch(updateGoal({ 
             goalId: goal.id, 

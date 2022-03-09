@@ -26,7 +26,7 @@ const GoalForm = () => {
     const handleSubmit = e => {
         e.preventDefault()
         if (goal === '') {
-            return toast.error('Enter your goal!', { autoClose: 750 })
+            return toast.error('Enter your goal!', { autoClose: 1000 })
         }
         const goalData = { text: goal }
 

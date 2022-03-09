@@ -24,7 +24,7 @@ const Login = () => {
             dispatch(reset())
             navigate('/dashboard')
         } else if (isError) {
-            toast.error(message, { autoClose: 750})
+            toast.error(message, { autoClose: 1000})
             dispatch(reset())
             navigate('/login')
         }
