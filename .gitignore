@@ -9,7 +9,7 @@
 /coverage
 
 # production
-# /build
+/build
 
 # misc
 .DS_Store
@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # WARNING !!!
-.env 
+.env
 
 01_rest_api.txt
 02_jwt_authentication.txt

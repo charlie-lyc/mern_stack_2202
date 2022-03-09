@@ -35,7 +35,10 @@ npm start
 (node backend/server.js)
 
 ----------------------------------------------------------
-heroku.com : needed .env file ...
+heroku.com
+
+- Need !!!! '.env' file and 'build' directory
+    NODE_ENV = production 
 
 - Install Heroku CLI
 brew tap heroku/brew && brew install heroku
@@ -52,7 +55,10 @@ git commit -m 'goal setter with mern stack'
 git push heroku main
 
 ----------------------------------------------------------
-github.com : WARNING !!! .env FILE !!!
+github.com
+
+- Except !!! '.env' file and 'build' directory
+    NODE_ENV = development 
 
 git add .
 git commit -m 'goal setter with mern stack'
