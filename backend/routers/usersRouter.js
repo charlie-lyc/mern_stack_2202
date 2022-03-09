@@ -1,7 +1,14 @@
 const express = require('express')
 const router = express.Router()
 
-const { registerUser, loginUser, getMe, updateMe, removeMe, logoutUser } = require('../controllers/usersController')
+const { 
+    registerUser, 
+    loginUser, 
+    getMe, 
+    // logoutUser,
+    // removeMe,
+    // updateMe
+} = require('../controllers/usersController')
 
 /** Public Access **/
 router.post('/', registerUser)
@@ -20,8 +27,9 @@ const protect = require('../middlewares/authMiddleware')
 // router.route('/logout').post(logoutUser)
 // router.route('/me').get(getMe).put(updateMe).delete(removeMe)
 /* OR */
-router.route('/logout').post(protect, logoutUser)
-router.route('/me').get(protect, getMe).put(protect, updateMe).delete(protect, removeMe)
+router.route('/me').get(protect, getMe)
+// router.route('/logout').post(protect, logoutUser)
+// router.route('/me').put(protect, updateMe).delete(protect, removeMe)
 
 
 module.exports = router

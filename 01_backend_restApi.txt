@@ -1,0 +1,34 @@
+
+- MongoDB : Mongoose 
+- Express
+- NodeJS
+
+
+< CRUD >
+
+Create
+-> HTTP [POST] /api/goals + payload <token>
+<- 201 + payload
+
+Read
+-> HTTP [GET] /api/goals + <token>
+<- 200 + payload
+
+Update 
+-> HTTP [PUT] /api/goals/:id + payload <token>
+<- 200 + payload
+
+Delete
+-> HTTP [DELETE] /api/goals/:id + <token>
+<- 200 + payload
+
+
+----------------------------------------------------------
+npm init (-y)
+npm i express mongoose express-async-handler dotenv colors
+npm i -D nodemon
+npm i cors
+
+git init
+git add .
+git commit -m 'rest api'

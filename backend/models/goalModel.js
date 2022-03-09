@@ -4,7 +4,7 @@ const goalSchema = new mongoose.Schema(
     {
         /** For User Authentication **/
         user: {
-            type: mongoose.Schema.Types.ObjectId, // Using 'ObjectId' of 'users' Collection from MongoDB
+            type: mongoose.Schema.Types.ObjectId, // Using 'ObjectId' Created from 'users' Collection of MongoDB
             required: true,
             ref: 'User'
         },

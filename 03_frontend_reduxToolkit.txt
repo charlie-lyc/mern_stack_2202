@@ -1,0 +1,14 @@
+
+- React, Redux, and Redux Toolkit
+
+----------------------------------------------------------
+/
+
+npx create-react-app@latest frontend --template redux
+npm i -D concurrently
+
+----------------------------------------------------------
+/frontend
+
+npm i react-router-dom react-icons
+npm i axios react-toastify
