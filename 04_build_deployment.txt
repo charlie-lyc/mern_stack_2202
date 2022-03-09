@@ -1,7 +1,7 @@
 
 - Build Frontend
 - Prepare Backend
-- Deploy
+- Deploy with Heroku
 
 ----------------------------------------------------------
 /frontend
@@ -35,3 +35,25 @@ npm start
 (node backend/server.js)
 
 ----------------------------------------------------------
+heroku.com : needed .env file ...
+
+- Install Heroku CLI
+brew tap heroku/brew && brew install heroku
+
+- Login
+heroku login
+
+- Create app
+heroku create goalsetter-mernstack
+
+- dashboard.heroku.com/apps -> Deploy
+git add .
+git commit -m 'goal setter with mern stack'
+git push heroku main
+
+----------------------------------------------------------
+github.com : WARNING !!! .env FILE !!!
+
+git add .
+git commit -m 'goal setter with mern stack'
+git push origin main
