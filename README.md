@@ -1,7 +1,7 @@
 # MERN Stack
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 <br />
-Learning MERN stack with building goal setter app.
+Learning MERN stack with building [Goal Setter](https://goalsetter-mernstack.herokuapp.com/) app.
 
 ## Backend
 
