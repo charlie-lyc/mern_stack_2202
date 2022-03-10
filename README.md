@@ -3,6 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <br />
 Learning MERN stack with building [Goal Setter](https://goalsetter-mernstack.herokuapp.com/) app.
 
+
 ## Backend
 
 - MongoDB, Mongoose 
@@ -11,11 +12,14 @@ Learning MERN stack with building [Goal Setter](https://goalsetter-mernstack.her
 - bcrypt.js
 - JWT(JSON Web Token)
 
+
 ## Frontend
 
 - React
-- React Redux
-- Redux Toolkit
+- Redux-Toolkit
+- React-Router-DOM
+- Axios
+
 
 ## API
 
@@ -28,7 +32,6 @@ Learning MERN stack with building [Goal Setter](https://goalsetter-mernstack.her
 - With Token
     - Get user data     : [GET]  /api/users/me
     - Log out user      : [POST] /api/users/logout
-
 
 ### Goal Setter
 
