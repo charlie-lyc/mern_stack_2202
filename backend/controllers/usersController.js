@@ -114,7 +114,7 @@ const getMe = asyncHandler(async (req, res) => {
 
 /**
  * @desc Log out
- * @route POST /api/users/logout
+ * @route GET /api/users/logout
  * @access Private
  */
 // const logoutUser = asyncHandler(async (req, res) => {

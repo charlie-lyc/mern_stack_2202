@@ -28,7 +28,7 @@ const protect = require('../middlewares/authMiddleware')
 // router.route('/me').get(getMe).put(updateMe).delete(removeMe)
 /* OR */
 router.route('/me').get(protect, getMe)
-// router.route('/logout').post(protect, logoutUser)
+// router.route('/logout').get(protect, logoutUser)
 // router.route('/me').put(protect, updateMe).delete(protect, removeMe)
 
 
