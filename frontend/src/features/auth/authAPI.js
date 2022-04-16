@@ -8,7 +8,7 @@
 //////////////////////////////////////////////////////////////////
 
 /**
- * Using Axios and Proxy(within package.json - "proxy": "http://localhost:5000")
+ * Using Axios and Proxy(within package.json - { "proxy": "http://localhost:5000" } - but this is not working!!!)
  */
 import axios from 'axios'
 

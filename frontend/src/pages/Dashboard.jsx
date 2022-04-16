@@ -10,7 +10,7 @@ const Dashboard = () => {
 
     return (
         <>
-            <section className="heading">
+            <section className='heading'>
                 <h4>Welcome, { user ? user.name : '' }!</h4>
                 <p>Goals Dashboard</p>
             </section>

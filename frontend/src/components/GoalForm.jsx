@@ -42,13 +42,13 @@ const GoalForm = () => {
     return (
         <section className='form'>
             <form onSubmit={ handleSubmit }>
-                <div className="form-group">
-                    <input type="text"
+                <div className='form-group'>
+                    <input type='text'
                         onChange={ handleChange }
                         value={ goal } 
                         placeholder='Enter your goal!' />
                 </div>
-                <button type="submit" className='btn btn-block'>
+                <button type='submit' className='btn btn-block'>
                     Add Goal
                 </button>
             </form>

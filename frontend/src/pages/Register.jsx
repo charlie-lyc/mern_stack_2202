@@ -45,7 +45,7 @@ const Register = () => {
         e.preventDefault()
         // console.log(formData)
         if (password !== confirm) {
-            return toast.error('Passwords do not match', { autoClose: 1000})
+            return toast.error('Passwords do not match', { autoClose: 1000 })
         }
         const userData = { name, email, password }
         dispatch(registerUser(userData))
@@ -75,7 +75,7 @@ const Register = () => {
                             onChange={ handleChange } 
                             value={ name } 
                             placeholder='Enter your name' />
-                        <input type='text' 
+                        <input type='email' 
                             name='email' 
                             onChange={ handleChange } 
                             value={ email } 
@@ -91,7 +91,7 @@ const Register = () => {
                             value={ confirm } 
                             placeholder='Confirm password' />
                     </div>
-                    <button type="submit" className='btn btn-block'>
+                    <button type='submit' className='btn btn-block'>
                         Submit
                     </button>
                 </form>

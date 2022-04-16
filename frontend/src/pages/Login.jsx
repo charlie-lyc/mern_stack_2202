@@ -61,18 +61,18 @@ const Login = () => {
             <section className='form'>
                 <form onSubmit={ handleSubmit }>
                     <div className='form-group'>
-                        <input type="text" 
+                        <input type='email' 
                             name='email' 
                             onChange={ handleChange }
                             value={ email } 
                             placeholder='Enter your email' />
-                        <input type="password"
+                        <input type='password'
                             name='password'
                             onChange={ handleChange }
                             value={ password }
                             placeholder='Enter password' />
                     </div>
-                    <button type="submit" className='btn btn-block'>
+                    <button type='submit' className='btn btn-block'>
                         Login
                     </button>
                 </form>
